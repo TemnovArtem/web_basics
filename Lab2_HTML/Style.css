@@ -1,0 +1,15 @@
+body{
+   
+
+color: rgb(79, 255, 10);
+background-color: rgb(177, 114, 130);
+
+}
+h1, h2{
+font-size: 60px;
+display: flex;
+justify-content: center;
+font-weight: 400;
+font-style: normal;
+
+}

@@ -52,7 +52,7 @@ background-color: #FFE4C4;
   /* 4. При наведенні миші на кнопку видалення необхідно змінювати її задній фон на #FFD050 */
   a:hover{
   background: #FFD050;
-
+  transition: 0.5s;
   }
   /* Checkpoint: Застилемо кнопку для видалення адреси */
   
@@ -88,14 +88,13 @@ left:100px ;
 bottom: 25px;
 padding: 0px;
   }
+ 
   .address__icon{
     position: relative;
  top: 45px;
-left: 15px;
+left: 20px;
   }
-  
 
-  
   
   /* Checkpoint: Позиціювання іконки адреси і заголовку */
   
@@ -119,8 +118,8 @@ flex-wrap: wrap;
 gap: 1%;
   }
   .address, .address2, .address3{
-    /*  */
-flex: 32%;    /* ПРОЧИТАТИ ПРО ЦЕ АБО ПИЗДЕЦЬ!!!!!!!! */
+   
+flex: 32%;    
 padding: 10px;
 position: relative;
 
@@ -132,7 +131,7 @@ position: relative;
   
   /* 12. При наведенні миші на будь-який блок з адресою необхідно змінювати його задній фон на світло-сірий #F3F3F3  */
   div:hover{
-background: gold;
+background: #F3F3F3;
 width: 120px;
 
   }
@@ -141,7 +140,7 @@ width: 120px;
     .address, .address2, .address3 {
      flex: 100%;
      margin: 0 0 20px 0;
-        /* тут вставте 2 рядки стилів, що змінять ширину блоку та його відступи */
+    
     }
   }
   
@@ -154,6 +153,3 @@ width: 120px;
     background-color: azure;
   }
   /* Додаткове завдання: зробити так, щоб можна було вставити 6 і більше карток з адресами корректно у документ. Підказка - треба в двох місцях змінити селектори а стилі лишити ті самі */
-  span{
-   
-  }

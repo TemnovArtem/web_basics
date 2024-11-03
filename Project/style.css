@@ -1,0 +1,34 @@
+*{
+  margin: 0;
+  padding: 0;  
+}
+#WinterUzhnu{
+background: aqua;
+font-size: 124px;
+text-align: center;
+}
+#AutumUzhnu{
+background:violet ;
+font-size: 124px;
+text-align: center;
+}
+#SummerUzhnu{
+background:darkkhaki;
+font-size: 124px;
+text-align: center;
+}
+#SpringUzhnu{
+background: hotpink;
+font-size: 124px;
+text-align: center;
+}
+.slider{
+display: flex;
+overflow-x: auto;
+scroll-snap-type: x mandatory;
+}
+.slide{
+min-width: 100vw;
+height: 100vh;
+scroll-snap-align: start;
+}

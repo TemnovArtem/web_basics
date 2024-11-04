@@ -1,37 +1,30 @@
-let car = {
-    speedometer: 0,
-
-    // Геттер
-    get speed() {
+const car = {
+    speedometer: 0
+  };
+  
+  // Додаємо методи до об'єкта car
+  Object.defineProperties(car, {
+    setSpeed: {
+      value: function(speed) {
+        this.speedometer = speed;
+        return this; // Повертаємо об'єкт car для ланцюжкового виклику
+      }
+    },
+    getSpeed: {
+      value: function() {
         return this.speedometer;
+      }
     },
-
-    // Сеттер
-    set speed(value) {
-        this.speedometer = value; 
-    },
-
-    // Метод для встановлення значення speedometer
-    setSpeed: function(value) {
-        this.speed = value;
-        return this; // Повертає об'єкт для ланцюгового виклику
-    },
-
-    // Метод для отримання значення speedometer
-    getspeed: function() {
-        return this.speed; // Повертає значення speedometer через геттер
-    },
-
-    // Метод для очищення speedometer
-    clearSpeedometer: function() {
+    clearSpeed: {
+      value: function() {
         this.speedometer = 0;
-        return this; // Повертає об'єкт для ланцюгового виклику
+        return this; // Повертаємо об'єкт car для ланцюжкового виклику
+      }
     }
-};
-
-
-let result = car.setSpeed(200).setSpeed(300).getspeed(); 
-car.clearSpeedometer();
-
-console.log(result); 
-console.log(car.speed); 
+  });
+  
+  // Приклад ланцюжкового виклику
+  console.log(car.setSpeed(200).setSpeed(300).getSpeed()); // Виведе: 300
+  car.clearSpeed();
+  console.log(car.getSpeed()); // Виведе: 0
+  

@@ -1,99 +1,20 @@
-let resoult= '';
-let resoult2='';
-let resoult3 = '';
-let resoult4 = '';
-let resoult5 = '';
-let resoult6 = '';
-let resoult7 = '';
-let resoult8 = '';
-let resoult9 = '';
+// Задаємо кількість рядків у верхній частині малюнка
+const rows = 5;
 
-let x ='*';
-
-
-function kl(){
-
-for(i=0; i<9; i++){
-     resoult += x;
+// Перший цикл для верхньої частини фігури (де кількість зірок зростає)
+for (let i = 1; i <= rows; i++) {
+  // Виводимо рядок з (i * 2 + 7) зірочками
+  // i * 2 + 7: де i змінюється від 1 до rows, тому кількість зірок зростає
+  console.log('*'.repeat(i * 2 + 7));
 }
 
-console.log(resoult);
-
-if(resoult.length = 3){
-                        
-    for(i=0; i<18; i++){
-        resoult2 += x;
-      
-   }
-   console.log(resoult2);
-   
+// Другий цикл для нижньої частини фігури (де кількість зірок зменшується)
+for (let i = rows - 1; i >= 0; i--) {
+  // Виводимо рядок з (i * 2 + 7) зірочками
+  // i * 2 + 7: де i зменшується від rows - 1 до 0, тому кількість зірок зменшується
+  console.log('*'.repeat(i * 2 + 7));
 }
-if(resoult.length = 3){
-                        
-    for(i=0; i<24; i++){
-        resoult3 += x;
-      
-   }
-   console.log(resoult3);
-   
-} if(resoult.length = 3){
-                        
-    for(i=0; i<27; i++){
-        resoult4 += x;
-      
-   }
-   console.log(resoult4);
-   
-}  if(resoult.length = 3){
-                        
-    for(i=0; i<29; i++){
-        resoult5 += x;
-      
-   }
-   console.log(resoult5);
-   
-}  
-console.log(resoult5);
-    
-    if(resoult.length = 3){
-                        
-    for(i=0; i<26; i++){
-        resoult6 += x;
-      
-   }
-   console.log(resoult6);
-   
-}  if(resoult.length = 3){
-                        
-    for(i=0; i<23; i++){
-        resoult7 += x;
-      
-   }
-   console.log(resoult7);
-   
-}  if(resoult.length = 3){
-                        
-    for(i=0; i<18; i++){
-        resoult8 += x;
-      
-   }
-   console.log(resoult8);
-   
-}  
 
-if(resoult.length = 3){
-                        
-    for(i=0; i<10; i++){
-        resoult9 += x;
-      
-   }
-   console.log(resoult9);
-   
-}  
-
-
-}
-kl()
 
 // завдання з таймером 
 

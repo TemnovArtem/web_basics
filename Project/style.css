@@ -32,3 +32,42 @@ min-width: 100vw;
 height: 100vh;
 scroll-snap-align: start;
 }
+
+
+/* .loadclick {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; 
+  
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  pointer-events: none; 
+}
+
+
+
+#loadWinterId{
+  height: 100%;
+  width: 100%;
+  
+}
+
+.mom{
+background: rgb(3, 3, 3);
+
+animation : open 20s forwards;
+}
+@keyframes open{
+0%{
+  transform: translateY(920px)
+}
+
+
+100%{
+transform: translateY(-920px);
+}
+} */

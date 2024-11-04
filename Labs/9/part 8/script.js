@@ -1,66 +1,62 @@
 // Базовий клас Animal
-class Animal {
-    constructor(name, sound) {
-        this.name = name;
-        this.sound = sound;
-    }
-    
+const Animal = {
+    // Метод для виведення звуку тварини
     makeSound() {
         console.log(`${this.name} каже: ${this.sound}`);
     }
-}
+};
 
-// Клас Mammal, що наслідується від Animal
-class Mammal extends Animal {
-    constructor(name, sound, furColor) {
-        super(name, sound); // викликаємо конструктор базового класу
-        this.furColor = furColor;
-    }
-    
-    showFurColor() {
-        console.log(`${this.name} має хутро ${this.furColor} кольору`);
-    }
-}
+// Об'єкт Mammal
 
-// Клас Bird, що наслідується від Animal
-class Bird extends Animal {
-    constructor(name, sound, canFly) {
-        super(name, sound);
-        this.canFly = canFly;
-    }
-    
-    fly() {
-        if (this.canFly) {
-            console.log(`${this.name} може літати`);
-        } else {
-            console.log(`${this.name} не може літати`);
-        }
-    }
-}
+const Mammal = Object.create(Animal); // Створюємо об'єкт Mammal, що наслідує методи з Animal
+// Додаємо showFurColor
+Mammal.showFurColor = function() {
+    console.log(`${this.name} має хутро ${this.furColor} кольору`);
+};
 
-// Клас Fish, що наслідується від Animal
-class Fish extends Animal {
-    constructor(name, sound, habitat) {
-        super(name, sound);
-        this.habitat = habitat;
-    }
-    
-    showHabitat() {
-        console.log(`${this.name} живе у ${this.habitat}`);
-    }
-}
+// Об'єкт Bird
+const Bird = Object.create(Animal); 
 
-// Створюємо об'єкти для перевірки
-const cat = new Mammal('Кіт', 'мяу', 'сірий');
-const eagle = new Bird('Орел', 'кар-кар', true);
-const shark = new Fish('Акула', '...', 'океані');
+// Додаємо  fly
+Bird.fly = function() {
+    console.log(`${this.name} ${this.canFly ? 'може' : 'не може'} літати`);
+};
 
-// Використовуємо методи
-cat.makeSound();          // Виведе: "Кіт каже: мяу"
-cat.showFurColor();       // Виведе: "Кіт має хутро сірого кольору"
+// Об'єкт Fish
+const Fish = Object.create(Animal); 
+// Додаємо showHabitat
+Fish.showHabitat = function() {
+    console.log(`${this.name} живе у ${this.habitat}`);
+};
 
-eagle.makeSound();        // Виведе: "Орел каже: кар-кар"
-eagle.fly();              // Виведе: "Орел може літати"
+// Створення об'єкта cat, що наслідується від Mammal
+const cat = Object.create(Mammal); 
+cat.name = 'Кіт';                 
+cat.sound = 'мяу';                
+cat.furColor = 'сірий';           
 
-shark.makeSound();        // Виведе: "Акула каже: ..."
-shark.showHabitat();      // Виведе: "Акула живе у океані"
+// Створення eagle
+const eagle = Object.create(Bird); 
+eagle.name = 'Орел';              
+eagle.sound = 'кар-кар';          
+eagle.canFly = true;              
+
+// Створення  shark
+const shark = Object.create(Fish); 
+shark.name = 'Акула';             
+shark.sound = '...';              
+shark.habitat = 'океані';         
+
+//об'єкт cat
+cat.makeSound();          // Викликаємо метод makeSound
+cat.showFurColor();       // Викликаємо метод showFurColor
+
+//  об'єкт eagle
+eagle.makeSound();        
+eagle.fly();              
+
+// об'єкт shark
+shark.makeSound();        // Викликаємо метод makeSound: "Акула каже: ..."
+shark.showHabitat();      // Викликаємо метод showHabitat: "Акула живе у океані"
+
+

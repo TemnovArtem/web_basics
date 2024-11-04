@@ -20,6 +20,6 @@ const car = {
 };
 
 // Приклад ланцюжкового виклику
-console.log(car.setSpeed(200).setSpeed(300).getSpeed()); // Виведе: 300
+console.log(car.setSpeed(200).setSpeed(300).getSpeed()); 
 car.clearSpeed();
-console.log(car.getSpeed()); // Виведе: 0
+console.log(car.getSpeed()); 
